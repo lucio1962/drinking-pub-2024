@@ -1,1 +1,318 @@
-ppppp
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Drinking Pub 2024</title>
+    <meta name="description" content="Scopri il nostro menu: mozzarella ineguagliabile, pan pizza, hamburger gourmet, spritz perfetti e birre artigianali.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🍺 Drinking Pub 2024</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="locali.html">Il Nostro Pub</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="tavolozze.html">Tavolozze</a>
+                <div id="auth-buttons">
+                    <button id="loginBtn" class="btn-secondary">Accedi</button>
+                    <button id="registerBtn" class="btn-primary">Registrati</button>
+                </div>
+                <div id="user-menu" style="display: none;">
+                    <span id="username"></span>
+                    <button id="createBtn" class="btn-primary">Crea Tavolozza</button>
+                    <button id="logoutBtn" class="btn-secondary">Esci</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-menu">
+            <div class="hero-menu-content">
+                <h1>Il Nostro Menu</h1>
+                <p>Scopri le eccellenze che rendono unica la tua esperienza al Drinking Pub 2024</p>
+            </div>
+        </section>
+
+        <!-- Filtri Menu -->
+        <section class="menu-filters">
+            <button class="filter-btn active" data-category="all">Tutto</button>
+            <button class="filter-btn" data-category="cibo">Cibo</button>
+            <button class="filter-btn" data-category="drink">Drink</button>
+            <button class="filter-btn" data-category="birra">Birre</button>
+            <button class="filter-btn" data-category="specialita">Specialità</button>
+        </section>
+
+        <!-- Menu Cibo -->
+        <section class="menu-section" id="cibo">
+            <h2>🍽️ Le Nostre Specialità Culinarie</h2>
+            
+            <div class="menu-category">
+                <h3>🧀 Antipasti e Mozzarella</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Mozzarella di Bufala DOP</h4>
+                            <span class="price">€12,00</span>
+                        </div>
+                        <p>La migliore mozzarella campana, cremosa e saporita, servita con pomodorini e basilico</p>
+                        <span class="badge">⭐ INEGUAGLIABILE</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Tagliere di Salumi e Formaggi</h4>
+                            <span class="price">€16,00</span>
+                        </div>
+                        <p>Selezione di salumi artigianali e formaggi locali con confetture della casa</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Bruschette Miste</h4>
+                            <span class="price">€8,00</span>
+                        </div>
+                        <p>Pane casereccio con pomodoro, mozzarella e pesto genovese</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🍕 Pan Pizza Artigianale</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Margherita Classica</h4>
+                            <span class="price">€10,00</span>
+                        </div>
+                        <p>Pomodoro San Marzano, mozzarella di bufala, basilico fresco</p>
+                        <span class="badge">👨‍🍳 ARTIGIANALE</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Diavola</h4>
+                            <span class="price">€12,00</span>
+                        </div>
+                        <p>Salame piccante, mozzarella, pomodoro e olive nere</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Quattro Stagioni</h4>
+                            <span class="price">€14,00</span>
+                        </div>
+                        <p>Prosciutto cotto, funghi, carciofi e olive</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🍔 Hamburger Gourmet</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Classic Burger</h4>
+                            <span class="price">€13,00</span>
+                        </div>
+                        <p>Carne di manzo 200g, cheddar, lattuga, pomodoro, salsa speciale</p>
+                        <span class="badge">🥩 GOURMET</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>BBQ Bacon Burger</h4>
+                            <span class="price">€15,00</span>
+                        </div>
+                        <p>Doppia carne, bacon croccante, cipolla caramellata, salsa BBQ</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Vegetariano</h4>
+                            <span class="price">€11,00</span>
+                        </div>
+                        <p>Hamburger di ceci e verdure, avocado, rucola, salsa yogurt</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Drink -->
+        <section class="menu-section" id="drink">
+            <h2>🍸 Drink e Cocktail</h2>
+
+            <div class="menu-category">
+                <h3>🍹 Cocktail Classici</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Spritz Veneziano</h4>
+                            <span class="price">€6,00</span>
+                        </div>
+                        <p>Prosecco, Aperol, soda water - Il perfetto aperitivo italiano</p>
+                        <span class="badge">🍊 PERFETTO</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Negroni</h4>
+                            <span class="price">€8,00</span>
+                        </div>
+                        <p>Gin, Campari, Vermouth rosso - L'equilibrio perfetto</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Mojito</h4>
+                            <span class="price">€7,00</span>
+                        </div>
+                        <p>Rum bianco, lime, menta, zucchero di canna - Freschezza caraibica</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🥃 Whisky e Superalcolici</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Whisky Single Malt</h4>
+                            <span class="price">€9,00</span>
+                        </div>
+                        <p>Selezione di whisky scozzesi e irlandesi</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Grappe Artigianali</h4>
+                            <span class="price">€6,00</span>
+                        </div>
+                        <p>Grappe di qualità selezionate dal nostro barista</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Birre -->
+        <section class="menu-section" id="birre">
+            <h2>🍺 Birre Artigianali</h2>
+
+            <div class="menu-category">
+                <h3>🇮🇹 Birre Italiane</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>IPA Italiana</h4>
+                            <span class="price">€6,00</span>
+                        </div>
+                        <p>Amara e fruttata, con sentori di agrumi italiani</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Birra Rossa Artigianale</h4>
+                            <span class="price">€5,50</span>
+                        </div>
+                        <p>Maltata con note tostate e caramello</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🌍 Birre Internazionali</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Stout Belga</h4>
+                            <span class="price">€7,00</span>
+                        </div>
+                        <p>Scura e corposa con note di caffè e cioccolato</p>
+                        <span class="badge">🍫 PREMIUM</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Lager Tedesca</h4>
+                            <span class="price">€5,00</span>
+                        </div>
+                        <p>Pulita e rinfrescante, secondo il Reinheitsgebot</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Ordina -->
+        <section class="cta-ordina">
+            <div class="cta-content">
+                <h2>📞 Servizio di Ordinazione</h2>
+                <p>Il servizio di ordinazione online sarà disponibile a breve</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" onclick="ordinaDemo()">🚧 Ordina (Prossimamente)</button>
+                    <button class="btn-secondary" onclick="location.href='locali.html'">Scopri il Pub</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Drinking Pub 2024</h3>
+                    <p>Via Lavino, 181/C, 40050 Calderino BO</p>
+                    <p>Telefono: [Numero disponibile a breve]</p>
+                </div>
+            </div>
+            <p class="copyright">© 2024 Drinking Pub 2024 - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        // Funzioni specifiche per la pagina menu
+        function ordinaDemo() {
+            alert('🚧 Servizio in sviluppo!\nLa funzione di ordinazione online sarà disponibile prossimamente.');
+        }
+
+        // Gestione filtri menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const menuSections = document.querySelectorAll('.menu-section');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.getAttribute('data-category');
+                    
+                    // Aggiorna bottoni attivi
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Mostra/nascondi sezioni
+                    menuSections.forEach(section => {
+                        if (category === 'all' || section.id === category) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Gestione auth demo
+            const loginBtn = document.getElementById('loginBtn');
+            const registerBtn = document.getElementById('registerBtn');
+            
+            if (loginBtn) loginBtn.addEventListener('click', () => {
+                alert('🔐 Accesso - Funzione in sviluppo');
+            });
+            
+            if (registerBtn) registerBtn.addEventListener('click', () => {
+                alert('📝 Registrazione - Funzione in sviluppo');
+            });
+        });
+    </script>
+</body>
+</html>
