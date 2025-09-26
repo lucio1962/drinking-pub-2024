@@ -1,1 +1,237 @@
-ppppp
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tavolozze - Drinking Pub 2024</title>
+    <meta name="description" content="Scopri le nostre tavolozze: abbinamenti perfetti tra drink e cibo creati dai nostri esperti.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🍺 Drinking Pub 2024</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="locali.html">Il Nostro Pub</a>
+                <a href="menu.html">Menu</a>
+                <a href="tavolozze.html" class="active">Tavolozze</a>
+                <div id="auth-buttons">
+                    <button id="loginBtn" class="btn-secondary">Accedi</button>
+                    <button id="registerBtn" class="btn-primary">Registrati</button>
+                </div>
+                <div id="user-menu" style="display: none;">
+                    <span id="username"></span>
+                    <button id="createBtn" class="btn-primary">Crea Tavolozza</button>
+                    <button id="logoutBtn" class="btn-secondary">Esci</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-tavolozze">
+            <div class="hero-tavolozze-content">
+                <h1>Le Nostre Tavolozze</h1>
+                <p>Abbinamenti perfetti tra drink e cibo, creati dai nostri esperti per la tua esperienza ideale</p>
+            </div>
+        </section>
+
+        <!-- Tavolozze del Pub -->
+        <section class="tavolozze-pub">
+            <h2>🎨 Tavolozze Consigliate dal Nostro Barista</h2>
+            
+            <div class="tavolozza-grid">
+                <div class="tavolozza-card">
+                    <div class="tavolozza-header">
+                        <h3>🇮🇹 Serata Italiana</h3>
+                        <span class="difficolta">Facile</span>
+                    </div>
+                    <div class="tavolozza-content">
+                        <div class="drink-section">
+                            <h4>🍸 Drink Principale</h4>
+                            <div class="drink-item">
+                                <strong>Spritz Perfetto</strong>
+                                <p>Prosecco, Aperol, soda water con scorza d'arancia</p>
+                            </div>
+                        </div>
+                        <div class="cibo-section">
+                            <h4>🍕 Abbinamento Cibo</h4>
+                            <div class="cibo-item">
+                                <strong>Tagliere di Mozzarella e Salumi</strong>
+                                <p>Mozzarella di bufala DOP, prosciutto di Parma, salame artigianale</p>
+                            </div>
+                        </div>
+                        <div class="descrizione">
+                            <p><strong>Perché funziona:</strong> L'amaro dello Spritz contrasta perfettamente con la cremosità della mozzarella e la sapidità dei salumi.</p>
+                        </div>
+                    </div>
+                    <div class="tavolozza-actions">
+                        <button class="btn-primary" onclick="ordinaTavolozzaDemo('Serata Italiana')">Ordina questa Tavolozza</button>
+                    </div>
+                </div>
+
+                <div class="tavolozza-card">
+                    <div class="tavolozza-header">
+                        <h3>🍔 Burger Experience</h3>
+                        <span class="difficolta">Media</span>
+                    </div>
+                    <div class="tavolozza-content">
+                        <div class="drink-section">
+                            <h4>🍺 Drink Principale</h4>
+                            <div class="drink-item">
+                                <strong>IPA Artigianale</strong>
+                                <p>Birra amara con sentori di agrumi e luppolo</p>
+                            </div>
+                        </div>
+                        <div class="cibo-section">
+                            <h4>🍔 Abbinamento Cibo</h4>
+                            <div class="cibo-item">
+                                <strong>BBQ Bacon Burger</strong>
+                                <p>Doppio hamburger, bacon croccante, cipolla caramellata</p>
+                            </div>
+                        </div>
+                        <div class="descrizione">
+                            <p><strong>Perché funziona:</strong> L'amaro dell'IPA taglia il grasso del burger e il dolce del bacon, pulendo il palato.</p>
+                        </div>
+                    </div>
+                    <div class="tavolozza-actions">
+                        <button class="btn-primary" onclick="ordinaTavolozzaDemo('Burger Experience')">Ordina questa Tavolozza</button>
+                    </div>
+                </div>
+
+                <div class="tavolozza-card">
+                    <div class="tavolozza-header">
+                        <h3>🌙 Serata Romantica</h3>
+                        <span class="difficolta">Esperto</span>
+                    </div>
+                    <div class="tavolozza-content">
+                        <div class="drink-section">
+                            <h4>🍷 Drink Principale</h4>
+                            <div class="drink-item">
+                                <strong>Negroni Sbagliato</strong>
+                                <p>Prosecco invece del gin, più leggero e frizzante</p>
+                            </div>
+                        </div>
+                        <div class="cibo-section">
+                            <h4>🧀 Abbinamento Cibo</h4>
+                            <div class="cibo-item">
+                                <strong>Selezione Formaggi</strong>
+                                <p>Formaggi stagionati con miele e noci</p>
+                            </div>
+                        </div>
+                        <div class="descrizione">
+                            <p><strong>Perché funziona:</strong> L'amaro complesso del Negroni esalta la cremosità dei formaggi.</p>
+                        </div>
+                    </div>
+                    <div class="tavolozza-actions">
+                        <button class="btn-primary" onclick="ordinaTavolozzaDemo('Serata Romantica')">Ordina questa Tavolozza</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crea la Tua Tavolozza -->
+        <section class="crea-tavolozza">
+            <div class="crea-content">
+                <h2>🎯 Crea la Tua Tavolozza Personalizzata</h2>
+                <p>Sei un esperto? Crea e condividi le tue combinazioni preferite con la community!</p>
+                
+                <div id="tavolozza-creator">
+                    <div class="form-group">
+                        <label for="nome-tavolozza">Nome della Tavolozza:</label>
+                        <input type="text" id="nome-tavolozza" placeholder="Es: 'Aperitivo Bolognese'">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descrizione-tavolozza">Descrizione:</label>
+                        <textarea id="descrizione-tavolozza" placeholder="Racconta la tua esperienza..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <h4>🍸 Seleziona i Drink</h4>
+                        <div class="select-items">
+                            <label><input type="checkbox" value="spritz"> Spritz Perfetto</label>
+                            <label><input type="checkbox" value="negroni"> Negroni</label>
+                            <label><input type="checkbox" value="mojito"> Mojito</label>
+                            <label><input type="checkbox" value="ipa"> IPA Artigianale</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h4>🍕 Seleziona il Cibo</h4>
+                        <div class="select-items">
+                            <label><input type="checkbox" value="mozzarella"> Mozzarella di Bufala</label>
+                            <label><input type="checkbox" value="pizza"> Pan Pizza</label>
+                            <label><input type="checkbox" value="hamburger"> Hamburger Gourmet</label>
+                            <label><input type="checkbox" value="tagliere"> Tagliere Misto</label>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" onclick="creaTavolozzaDemo()">Crea la Mia Tavolozza</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Tavolozze -->
+        <section class="community-tavolozze">
+            <h2>👥 Tavolozze della Community</h2>
+            <div class="demo-message">
+                <p>🚧 Area in sviluppo - Presto potrai vedere le tavolozze create da altri clienti!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Drinking Pub 2024</h3>
+                    <p>Via Lavino, 181/C, 40050 Calderino BO</p>
+                    <p>Telefono: [Numero disponibile a breve]</p>
+                </div>
+            </div>
+            <p class="copyright">© 2024 Drinking Pub 2024 - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        // Funzioni specifiche per la pagina tavolozze
+        function ordinaTavolozzaDemo(nomeTavolozza) {
+            alert(`🍹 Tavolozza "${nomeTavolozza}" selezionata!\n🚧 Funzione di ordinazione in sviluppo.`);
+        }
+
+        function creaTavolozzaDemo() {
+            const nome = document.getElementById('nome-tavolozza').value;
+            
+            if (!nome) {
+                alert('Inserisci un nome per la tua tavolozza!');
+                return;
+            }
+            
+            alert(`🎉 Tavolozza "${nome}" creata con successo!\n🚧 La funzionalità completa sarà disponibile a breve.`);
+            
+            // Reset form
+            document.getElementById('nome-tavolozza').value = '';
+            document.getElementById('descrizione-tavolozza').value = '';
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+        }
+
+        // Gestione auth demo
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('loginBtn');
+            const registerBtn = document.getElementById('registerBtn');
+            
+            if (loginBtn) loginBtn.addEventListener('click', () => {
+                alert('🔐 Accesso - Funzione in sviluppo');
+            });
+            
+            if (registerBtn) registerBtn.addEventListener('click', () => {
+                alert('📝 Registrazione - Funzione in sviluppo');
+            });
+        });
+    </script>
+</body>
+</html>
