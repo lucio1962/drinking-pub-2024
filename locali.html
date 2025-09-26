@@ -1,1 +1,277 @@
-ppppp
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Nostro Pub - Drinking Pub 2024</title>
+    <meta name="description" content="Scopri l'atmosfera unica del Drinking Pub 2024: ambiente spettacolare, servizio veloce, barista esperto e musica dal vivo.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🍺 Drinking Pub 2024</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="locali.html" class="active">Il Nostro Pub</a>
+                <a href="menu.html">Menu</a>
+                <a href="tavolozze.html">Tavolozze</a>
+                <div id="auth-buttons">
+                    <button id="loginBtn" class="btn-secondary">Accedi</button>
+                    <button id="registerBtn" class="btn-primary">Registrati</button>
+                </div>
+                <div id="user-menu" style="display: none;">
+                    <span id="username"></span>
+                    <button id="createBtn" class="btn-primary">Crea Tavolozza</button>
+                    <button id="logoutBtn" class="btn-secondary">Esci</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-locali">
+            <div class="hero-locali-content">
+                <h2>L'Esperienza Drinking Pub 2024</h2>
+                <p>Dove ogni dettaglio racconta la nostra passione per l'eccellenza</p>
+            </div>
+        </section>
+
+        <!-- Descrizione Pub -->
+        <section class="descrizione-pub">
+            <div class="descrizione-content">
+                <div class="descrizione-text">
+                    <h2>Ambiente Spettacolare, Servizio Veloce</h2>
+                    <p>Al <strong>Drinking Pub 2024</strong> non serviamo solo drink e pietanze, creiamo <strong>esperienze indimenticabili</strong>. Il nostro barista paziente e competente riflette lo stile e la personalità che ci distinguono.</p>
+                    
+                    <div class="highlight-box">
+                        <h3>🍽️ Cosa ci Rende Speciali</h3>
+                        <ul>
+                            <li><strong>Mozzarella ineguagliabile</strong> - La cremosità che fa la differenza</li>
+                            <li><strong>Pan pizza croccante</strong> - Lievitazione naturale e ingredienti top</li>
+                            <li><strong>Hamburger gourmet</strong> - Carne selezionata e abbinamenti innovativi</li>
+                            <li><strong>Spritz perfetti</strong> - Le proporzioni giuste per l'eccellenza</li>
+                            <li><strong>Birre artigianali</strong> - Una selezione curata per ogni palato</li>
+                        </ul>
+                    </div>
+
+                    <p>Il nostro <strong>servizio veloce</strong> e l'<strong>ambiente spettacolare</strong> ti faranno sentire a casa from the moment you walk in. Che tu sia qui per un aperitivo veloce o una serata con amici, rimarrai <strong>sicuramente contento</strong> della tua esperienza.</p>
+                </div>
+
+                <div class="descrizione-image">
+                    <div class="image-placeholder">🏢</div>
+                    <div class="image-caption">L'atmosfera unica del nostro pub</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servizi -->
+        <section class="servizi-section">
+            <h2>I Nostri Servizi</h2>
+            <div class="servizi-grid">
+                <div class="servizio-card">
+                    <div class="servizio-icon">🌳</div>
+                    <h3>Tavoli all'aperto</h3>
+                    <p>Goditi le serate estive nei nostri spazi esterni confortevoli</p>
+                </div>
+
+                <div class="servizio-card">
+                    <div class="servizio-icon">🎵</div>
+                    <h3>Musica dal vivo</h3>
+                    <p>Serate con artisti locali e atmosfere musicali curate</p>
+                </div>
+
+                <div class="servizio-card">
+                    <div class="servizio-icon">🍸</div>
+                    <h3>Ottimi cocktail</h3>
+                    <p>Preparati con maestria dal nostro barista esperto</p>
+                </div>
+
+                <div class="servizio-card">
+                    <div class="servizio-icon">🚚</div>
+                    <h3>Take Away</h3>
+                    <p>Porta a casa la qualità del Drinking Pub</p>
+                </div>
+
+                <div class="servizio-card">
+                    <div class="servizio-icon">🎉</div>
+                    <h3>Eventi Privati</h3>
+                    <p>Organizziamo feste e eventi su misura</p>
+                </div>
+
+                <div class="servizio-card">
+                    <div class="servizio-icon">📶</div>
+                    <h3>Wi-Fi Gratuito</h3>
+                    <p>Resta connesso mentre ti godi il tuo momento</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Pratiche -->
+        <section class="info-pratiche">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📞 Contatti</h3>
+                    <div class="contact-info">
+                        <p><strong>Telefono:</strong> [Numero disponibile a breve]</p>
+                        <p><strong>Email:</strong> info@drinkingpub.it</p>
+                        <p><strong>Indirizzo:</strong> Via Lavino, 181/C, 40050 Calderino BO</p>
+                    </div>
+                    <button class="btn-primary" onclick="prenotaDemo()">Prenota un Tavolo</button>
+                </div>
+
+                <div class="info-card">
+                    <h3>⏰ Orari di Apertura</h3>
+                    <div class="orari-info">
+                        <p><strong>Tutti i giorni:</strong> 18:00 - 02:00</p>
+                        <div id="orario-live">
+                            <span class="status-open">🔴 APERTO ORA</span>
+                            <span>Chiudiamo alle 02:00</span>
+                        </div>
+                    </div>
+                    <button class="btn-secondary" onclick="vediMappaDemo()">Vedi su Mappa</button>
+                </div>
+
+                <div class="info-card">
+                    <h3>📍 Come Raggiungerci</h3>
+                    <div class="mappa-info">
+                        <p><strong>In auto:</strong> Parcheggio gratuito disponibile nelle vicinanze</p>
+                        <p><strong>In bus:</strong> Fermata Calderino a 5 minuti a piedi</p>
+                        <p><strong>Area:</strong> Zona tranquilla con facile accesso</p>
+                    </div>
+                    <button class="btn-secondary" onclick="apriNavigatoreDemo()">Indicazioni</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recensioni -->
+        <section class="recensioni-section">
+            <h2>Cosa Dicono di Noi</h2>
+            <div class="recensioni-grid">
+                <div class="recensione-card">
+                    <div class="recensione-header">
+                        <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+                        <span class="recensione-data">2 giorni fa</span>
+                    </div>
+                    <p>"Mozzarella fantastica e spritz perfetti! Ambiente giovane e servizio velocissimo. Tornerò sicuramente!"</p>
+                    <span class="recensione-autore">- Marco R.</span>
+                </div>
+
+                <div class="recensione-card">
+                    <div class="recensione-header">
+                        <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+                        <span class="recensione-data">1 settimana fa</span>
+                    </div>
+                    <p>"Il barista è veramente esperto, ci ha consigliato cocktail fantastici. Hamburger eccellente!"</p>
+                    <span class="recensione-autore">- Laura M.</span>
+                </div>
+
+                <div class="recensione-card">
+                    <div class="recensione-header">
+                        <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+                        <span class="recensione-data">3 settimane fa</span>
+                    </div>
+                    <p>"Serata con musica dal vivo fantastica! Ottima atmosfera e personale cordiale. Complimenti!"</p>
+                    <span class="recensione-autore">- Simone B.</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Drinking Pub 2024</h3>
+                    <p>Via Lavino, 181/C, 40050 Calderino BO</p>
+                    <p>Telefono: [Numero disponibile a breve]</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Seguici</h3>
+                    <div class="social-links">
+                        <a href="#" onclick="condividiFacebook()">Facebook</a>
+                        <a href="#" onclick="condividiInstagram()">Instagram</a>
+                        <a href="#" onclick="condividiWhatsApp()">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2024 Drinking Pub 2024 - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        // Funzioni specifiche per la pagina locali
+        function prenotaDemo() {
+            alert('🚧 Sito in fase di sviluppo!\nIl servizio di prenotazione sarà disponibile a breve.');
+        }
+
+        function vediMappaDemo() {
+            const indirizzo = 'Via Lavino, 181/C, 40050 Calderino BO';
+            const urlMaps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(indirizzo)}`;
+            window.open(urlMaps, '_blank');
+        }
+
+        function apriNavigatoreDemo() {
+            const indirizzo = 'Via Lavino, 181/C, 40050 Calderino BO';
+            if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                window.open(`geo:0,0?q=${encodeURIComponent(indirizzo)}`);
+            } else {
+                vediMappaDemo();
+            }
+        }
+
+        // Gestione orari in tempo reale
+        function aggiornaStatoApertura() {
+            const now = new Date();
+            const currentHour = now.getHours();
+            const isOpen = currentHour >= 18 || currentHour < 2;
+            
+            const elementoStato = document.getElementById('orario-live');
+            
+            if (elementoStato) {
+                const statusElement = elementoStato.querySelector('.status-open');
+                if (statusElement) {
+                    if (isOpen) {
+                        statusElement.textContent = '🔴 APERTO ORA';
+                        statusElement.className = 'status-open';
+                    } else {
+                        statusElement.textContent = '⏳ CHIUSO';
+                        statusElement.className = 'status-closed';
+                    }
+                }
+            }
+        }
+
+        // Social sharing demo
+        function condividiFacebook() {
+            alert('📱 Condivisione Facebook - Funzione in sviluppo');
+        }
+
+        function condividiInstagram() {
+            alert('📸 Condivisione Instagram - Funzione in sviluppo');
+        }
+
+        function condividiWhatsApp() {
+            alert('💬 Condivisione WhatsApp - Funzione in sviluppo');
+        }
+
+        // Inizializzazione
+        document.addEventListener('DOMContentLoaded', function() {
+            aggiornaStatoApertura();
+            setInterval(aggiornaStatoApertura, 60000);
+
+            // Gestione auth demo
+            const loginBtn = document.getElementById('loginBtn');
+            const registerBtn = document.getElementById('registerBtn');
+            
+            if (loginBtn) loginBtn.addEventListener('click', () => {
+                alert('🔐 Accesso - Funzione in sviluppo');
+            });
+            
+            if (registerBtn) registerBtn.addEventListener('click', () => {
+                alert('📝 Registrazione - Funzione in sviluppo');
+            });
+        });
+    </script>
+</body>
+</html>
