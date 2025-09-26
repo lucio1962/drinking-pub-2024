@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinking Pub 2024 - Il Tuo Pub Preferito a Calderino</title>
+    <meta name="description" content="Drinking Pub 2024: mozzarella, pan pizza, hamburger, spritz, birre e cocktail. Musica dal vivo e tavoli all'aperto a Calderino.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🍺 Drinking Pub 2024</h1>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="locali.html">Il Nostro Pub</a>
+                <a href="menu.html">Menu</a>
+                <a href="tavolozze.html">Tavolozze</a>
+                <div id="auth-buttons">
+                    <button id="loginBtn" class="btn-secondary">Accedi</button>
+                    <button id="registerBtn" class="btn-primary">Registrati</button>
+                </div>
+                <div id="user-menu" style="display: none;">
+                    <span id="username"></span>
+                    <button id="createBtn" class="btn-primary">Crea Tavolozza</button>
+                    <button id="logoutBtn" class="btn-secondary">Esci</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Benvenuti al Drinking Pub 2024</h2>
+                <p class="hero-subtitle">Dove tradizione e innovazione si incontrano in ogni bicchiere</p>
+                <div class="hero-highlights">
+                    <span>🍕 Mozzarella Ineguagliabile</span>
+                    <span>🍔 Hamburger Gourmet</span>
+                    <span>🍸 Cocktail Perfetti</span>
+                    <span>🎵 Musica Dal Vivo</span>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="location.href='menu.html'">Scopri il Menu</button>
+                    <button class="btn-secondary" onclick="prenotaOra()">Prenota un Tavolo</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Pub -->
+        <section class="pub-info">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📍 Ci Trovi Qui</h3>
+                    <p><strong>Indirizzo:</strong> Via Lavino, 181/C, 40050 Calderino BO</p>
+                    <p><strong>Telefono:</strong> <a href="tel:3312174673">331 217 4673</a></p>
+                    <button class="btn-secondary" onclick="vediMappa()">Vedi su Mappa</button>
+                </div>
+
+                <div class="info-card">
+                    <h3>⏰ Orari di Apertura</h3>
+                    <p><strong>Tutti i giorni:</strong> 18:00 - 02:00</p>
+                    <p id="stato-apertura"><strong>🔴 APERTO ORA</strong> - Chiudiamo alle 02:00</p>
+                    <div class="orari-completi">
+                        <details>
+                            <summary>Orari completi</summary>
+                            <div class="orari-list">
+                                <div>Lunedì: 18:00 - 02:00</div>
+                                <div>Martedì: 18:00 - 02:00</div>
+                                <div>Mercoledì: 18:00 - 02:00</div>
+                                <div>Giovedì: 18:00 - 02:00</div>
+                                <div>Venerdì: 18:00 - 02:00</div>
+                                <div>Sabato: 18:00 - 02:00</div>
+                                <div>Domenica: 18:00 - 02:00</div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🎯 Perché Sceglierci</h3>
+                    <ul class="benefits-list">
+                        <li>✅ Servizio Veloce e Cordiale</li>
+                        <li>✅ Ambiente Spettacolare</li>
+                        <li>✅ Barista Esperto e Paziente</li>
+                        <li>✅ Ingredienti di Alta Qualità</li>
+                        <li>✅ Musica Dal Vivo</li>
+                        <li>✅ Tavoli All'aperto</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialità -->
+        <section class="specialita">
+            <h2>Le Nostre Eccellenze</h2>
+            <div class="specialita-grid">
+                <div class="specialita-card">
+                    <div class="specialita-icon">🍕</div>
+                    <h3>Pan Pizza Artigianale</h3>
+                    <p>La nostra pizza soffice e croccante, preparata con lievitazione naturale e ingredienti selezionati</p>
+                </div>
+
+                <div class="specialita-card">
+                    <div class="specialita-icon">🍔</div>
+                    <h3>Hamburger Gourmet</h3>
+                    <p>Carne di prima qualità, pani artigianali e abbinamenti innovativi per un'esperienza unica</p>
+                </div>
+
+                <div class="specialita-card">
+                    <div class="specialita-icon">🧀</div>
+                    <h3>Mozzarella di Bufala</h3>
+                    <p>La migliore mozzarella campana DOP, fresca e cremosa, per i tuoi momenti di gusto</p>
+                </div>
+
+                <div class="specialita-card">
+                    <div class="specialita-icon">🍸</div>
+                    <h3>Spritz Perfetti</h3>
+                    <p>Il vero spritz all'italiana, preparato con proporzioni precise e ingredienti premium</p>
+                </div>
+
+                <div class="specialita-card">
+                    <div class="specialita-icon">🍺</div>
+                    <h3>Birre Artigianali</h3>
+                    <p>Una selezione curata di birre craft italiane e internazionali, sempre alla spina</p>
+                </div>
+
+                <div class="specialita-card">
+                    <div class="specialita-icon">🎵</div>
+                    <h3>Musica Live</h3>
+                    <p>Serate con artisti locali e atmosfere uniche per rendere speciale ogni vostra visita</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Vieni a Trovarci!</h2>
+                <p>Scopri perché il Drinking Pub 2024 è diventato il punto di riferimento per gli amanti del buon cibo e dei drink di qualità a Calderino</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" onclick="prenotaOra()">📞 Prenota al 331 217 4673</button>
+                    <button class="btn-secondary" onclick="vediMappa()">🗺️ Vieni a Trovarci</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Drinking Pub 2024</h3>
+                    <p>Via Lavino, 181/C, 40050 Calderino BO</p>
+                    <p>Telefono: <a href="tel:3312174673">331 217 4673</a></p>
+                    <p>Email: info@drinkingpub.it</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Seguici</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2024 Drinking Pub 2024 - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
