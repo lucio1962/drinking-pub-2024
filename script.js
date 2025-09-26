@@ -1,24 +1,16 @@
-// Funzioni di utilità
-function prenotaOra() {
-    const telefono = '3312174673';
-    const messaggio = 'Ciao, vorrei prenotare un tavolo per stasera al Drinking Pub 2024!';
-    const urlWhatsApp = `https://wa.me/39${telefono}?text=${encodeURIComponent(messaggio)}`;
-    window.open(urlWhatsApp, '_blank');
+// Funzioni di utilità - VERSIONE DEMO SENZA TELEFONO
+function prenotaDemo() {
+    alert('🚧 Sito in fase di sviluppo!\nIl servizio di prenotazione sarà disponibile a breve.');
 }
 
-function vediMappa() {
+function vediMappaDemo() {
     const indirizzo = 'Via Lavino, 181/C, 40050 Calderino BO';
     const urlMaps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(indirizzo)}`;
     window.open(urlMaps, '_blank');
 }
 
-function apriNavigatore() {
-    const indirizzo = 'Via Lavino, 181/C, 40050 Calderino BO';
-    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        window.open(`geo:0,0?q=${encodeURIComponent(indirizzo)}`);
-    } else {
-        vediMappa();
-    }
+function ordinaTavolozzaDemo(nomeTavolozza) {
+    alert(`🍹 Tavolozza "${nomeTavolozza}" selezionata!\n🚧 Funzione di ordinazione in sviluppo.`);
 }
 
 // Gestione Orari
@@ -43,23 +35,38 @@ function aggiornaStatoApertura() {
 // Inizializzazione
 document.addEventListener('DOMContentLoaded', function() {
     aggiornaStatoApertura();
-    setInterval(aggiornaStatoApertura, 60000); // Aggiorna ogni minuto
+    setInterval(aggiornaStatoApertura, 60000);
 });
 
 // Social Sharing
 function condividiFacebook() {
-    const url = encodeURIComponent(window.location.href);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    alert('📱 Condivisione Facebook - Funzione in sviluppo');
 }
 
 function condividiInstagram() {
-    alert('Condividi la nostra pagina sui tuoi story! Tagga @drinkingpub2024');
+    alert('📸 Condivisione Instagram - Funzione in sviluppo');
 }
 
 function condividiWhatsApp() {
-    const text = encodeURIComponent('Scopri il Drinking Pub 2024! 🍹 Ottimi cocktail, mozzarella fantastica e musica dal vivo!');
-    const url = encodeURIComponent(window.location.href);
-    window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+    alert('💬 Condivisione WhatsApp - Funzione in sviluppo');
 }
 
-console.log('Drinking Pub 2024 - Benvenuti! 🍹');
+// Gestione Auth (demo)
+function handleAuth(action) {
+    if (action === 'login') {
+        alert('🔐 Accesso - Funzione in sviluppo');
+    } else if (action === 'register') {
+        alert('📝 Registrazione - Funzione in sviluppo');
+    }
+}
+
+// Aggiungi event listener per i bottoni auth
+document.addEventListener('DOMContentLoaded', function() {
+    const loginBtn = document.getElementById('loginBtn');
+    const registerBtn = document.getElementById('registerBtn');
+    
+    if (loginBtn) loginBtn.addEventListener('click', () => handleAuth('login'));
+    if (registerBtn) registerBtn.addEventListener('click', () => handleAuth('register'));
+});
+
+console.log('Drinking Pub 2024 - Sito Demo 🚧');
